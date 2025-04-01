@@ -51,21 +51,4 @@ Currently it shows:
 
 # Building from source
 
-To build locally run `./gradlew installDist`.
-Then go to `./build/install/jvm-mon/` and run `./bin/jvm-mon`.
-
-To develop you will need `npm` on your machine and then run `./gradlew npmDeps` once to get dependencies.
-
-# How does it work?
-
-jvm-mon is a Kotlin application based on these awesome libraries: 
-- [blessed-contrib](https://github.com/yaronn/blessed-contrib) terminal dashboard library in JavaScript
-- [J2V8](https://github.com/eclipsesource/J2V8) Java Bindings for V8 JavaScript engine and Node.js
-- [jvmtop](https://github.com/patric-r/jvmtop) Java monitoring for the command-line
-
-The way it works is:
- 1. The Kotlin app starts a Node.js engine in-process
- 2. Node.js loads a script with all the widgets
- 3. The script calls back into Kotlin to get metrics
-
-
+See the [readme](jvm-mon-go/README.md)
